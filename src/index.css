@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Dancing+Script:wght@400..700&family=Diphylleia&family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Port+Lligat+Slab&family=Smooch+Sans:wght@100..900&family=Tektur:wght@400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background-image: url(./assets/background.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1rem;
+}
+
+.wrapper {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -----Navbar Start----- */
+nav {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.459);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 1px solid rgba(173, 173, 173, 0.904);
+}
+
+.nav_part1 {
+  display: flex;
+  a {
+    text-shadow: 0px 0px 5px black;
+    font-family: "Tektur", sans-serif;
+    text-decoration: none;
+    margin-left: 0.3rem;
+  }
+}
+
+.nav_part2 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  svg {
+    height: 35px;
+    fill: white;
+    margin-left: 0.6rem;
+  }
+}
+
+.profilePic {
+  height: 40px;
+  width: 40px;
+  clip-path: circle(50% at 50% 50%);
+  background-color: orange;
+  background-image: url(./assets/profile.png);
+  background-position: center;
+  background-size: cover;
+  margin-left: 0.6rem;
+}
+
+@media (max-width: 425px) {
+  .nav_part1 {
+    display: block;
+
+    a {
+      margin: unset;
+    }
+  }
+}
+
+/* -----Navbar End----- */
+
+.watch_container {
+  height: 230px;
+  width: 400px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0.6rem;
+
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.display_timer,
+.button_container {
+  flex: 1;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display_timer {
+  font-size: 3rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+.button_container {
+  flex: unset;
+  height: 100px;
+}
+
+.button_container button {
+  padding: 0.6rem 1.7rem;
+  margin: 0 0.5rem;
+  border-radius: 0.4rem;
+  border: none;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.61);
+  transition: 0.2s ease-in-out;
+  font-family: "Port Lligat Slab", sans-serif;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.button_container button:nth-child(1) {
+  background-color: rgba(19, 196, 172, 0.61);
+  backdrop-filter: blur(4px);
+
+  &:hover {
+    background-color: rgb(19, 196, 172);
+  }
+}
+
+.button_container button:nth-child(2) {
+  background-color: rgba(60, 196, 19, 0.61);
+
+  &:hover {
+    background-color: rgb(60, 196, 19);
+  }
+}
+
+.button_container button:nth-child(3) {
+  background-color: rgba(196, 19, 19, 0.61);
+
+  &:hover {
+    background-color: rgb(209, 13, 13);
+  }
+}
